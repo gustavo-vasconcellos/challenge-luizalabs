@@ -1,34 +1,29 @@
 import React from 'react'
-import { AiFillHeart } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import Location from './Location'
+import Container from '../utils/Container'
 import SearchBar from './SearchBar'
+import Menu from './Menu'
 
 const Header: React.FunctionComponent = () => {
   return (
-    <div className="flex itens-start">
-      <div className="">
-        <h1 className="fw6 f2">MagaNets</h1>
-      </div>
-      <div className="flex-grow-1">
-        <div className="">
-          <Location />
-          <div className="">
-            <a href="https://atendimento.magazineluiza.com.br/hc/pt-br/">
-              Central de Atendimento
-            </a>
+    <div className="bg-purple white">
+      <Container>
+        <div className="db dn-l mb1">
+          <Menu />
+        </div>
+        <div className="flex-l items-start">
+          <div className="mw4-l w-100 tc tl-l">
+            <h1 className="fw6 f3-l f2 ma0 lh-copy">MagaNets</h1>
           </div>
-          <div className="">
-            <Link to="/wishlist">
-              <AiFillHeart />
-              <span>Lista de Desejos</span>
-            </Link>
+          <div className="flex-grow-1 ">
+            <div className="db-l dn">
+              <Menu />
+            </div>
+            <div className="">
+              <SearchBar />
+            </div>
           </div>
         </div>
-        <div className="">
-          <SearchBar />
-        </div>
-      </div>
+      </Container>
     </div>
   )
 }
