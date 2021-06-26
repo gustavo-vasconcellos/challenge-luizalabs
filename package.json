@@ -12,6 +12,8 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
@@ -32,20 +34,30 @@
     "production": [
       ">0.2%",
       "not dead",
+      "ie 8",
       "not op_mini all"
     ],
     "development": [
+      "ie 8",
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "prettier": "^2.3.2"
   }
 }
