@@ -5,3 +5,31 @@ svg {
 .bg-purple {
   background-color: #5a2d82;
 }
+
+@media (min-width: 30em) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 20px;
+  }
+}
+
+@media (min-width: 40em) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 20px;
+  }
+}
+
+@media (min-width: 60em) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 20px;
+  }
+}
+
+.product-image {
+  max-width: 300px;
+}
