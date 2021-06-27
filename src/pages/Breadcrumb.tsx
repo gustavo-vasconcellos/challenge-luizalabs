@@ -6,8 +6,8 @@ const Breadcrumb: React.FunctionComponent = () => {
   const [paths, setPaths] = useState<string[]>([])
 
   useEffect(() => {
-    const newPaths = location.pathname.split('/').map((path) => {
-      if (path === '') {
+    const newPaths = location.pathname.split('/').map((path, index) => {
+      if (path === '' && index === 0) {
         return 'Home'
       }
 
@@ -20,7 +20,7 @@ const Breadcrumb: React.FunctionComponent = () => {
   return (
     <div className="flex fw5 ttc mb3">
       {paths.map((path, index) => {
-        if (index) {
+        if (index && path) {
           return <span>&nbsp;&gt; {path}</span>
         }
         return <span>{path}</span>
