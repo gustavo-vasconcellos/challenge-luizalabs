@@ -12,7 +12,7 @@ const ProductSummary: React.FunctionComponent<ProductSummaryProps> = ({
   product,
 }) => {
   return (
-    <div className="flex flex-column justify-center pa3 relative br2 b--black-30 ba mb4-l mb3">
+    <div className="pa3 relative br2 b--black-30 ba mb4-l mb3">
       <div>{/* <AddToListButton product={product} /> */}</div>
       <div className="tc">
         <ProductImage src={product.image} alt={product.title} />
