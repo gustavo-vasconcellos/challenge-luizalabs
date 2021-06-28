@@ -6,7 +6,7 @@ interface ProductNameProps {
 
 const ProductName: React.FunctionComponent<ProductNameProps> = ({ name }) => {
   return (
-    <h3 data-test-id="product-name" className="product-name fw5 tc f5">
+    <h3 data-testid="product-name" className="product-name fw5 tc f5">
       {name}
     </h3>
   )

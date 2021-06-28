@@ -5,7 +5,7 @@ import Menu from './Menu'
 
 const Header: React.FunctionComponent = () => {
   return (
-    <div className="bg-purple white" data-test-id="header">
+    <div className="bg-purple white" data-testid="header">
       <Container>
         <div className="db dn-l mb1">
           <Menu />

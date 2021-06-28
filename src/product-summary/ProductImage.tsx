@@ -11,7 +11,7 @@ const ProductImage: React.FunctionComponent<ProductImageProps> = ({
 }) => {
   return (
     <img
-      data-test-id="product-image"
+      data-testid="product-image"
       src={src}
       alt={alt}
       className="product-image w-100 h-100"

@@ -17,7 +17,7 @@ const AddToListButton: React.FunctionComponent<AddToListButtonProps> = ({
 
   return (
     <div
-      data-test-id="add-to-list-button"
+      data-testid="add-to-list-button"
       tabIndex={0}
       onKeyDown={(event) => {
         if (event.keyCode === 13 || event.key === '13') {

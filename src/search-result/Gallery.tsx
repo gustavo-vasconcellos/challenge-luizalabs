@@ -15,18 +15,18 @@ const Gallery: React.FunctionComponent<GalleryProps> = ({
 }) => {
   if (isLoading) {
     return (
-      <div data-test-id="gallery" className="flex justify-center pv5 w-100 tc">
+      <div data-testid="gallery" className="flex justify-center pv5 w-100 tc">
         <Loader type="Grid" color="#5a2d82" height="75" width="75" />
       </div>
     )
   }
 
   if (!products?.length) {
-    return <div data-test-id="gallery">error</div>
+    return <div data-testid="gallery">error</div>
   }
 
   return (
-    <div className="gallery" data-test-id="gallery">
+    <div className="gallery" data-testid="gallery">
       {products.map((product) => (
         <ProductSummary key={product.sku} product={product} />
       ))}

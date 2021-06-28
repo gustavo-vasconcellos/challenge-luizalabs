@@ -10,7 +10,7 @@ const ProductPrice: React.FunctionComponent<ProductPriceProps> = ({
   currencyFormat,
 }) => {
   return (
-    <span data-test-id="product-price">
+    <span data-testid="product-price">
       {currencyFormat}&nbsp;<span>{price.toFixed(2)}</span>
     </span>
   )

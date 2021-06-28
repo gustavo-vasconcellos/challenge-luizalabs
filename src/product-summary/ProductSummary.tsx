@@ -14,7 +14,7 @@ const ProductSummary: React.FunctionComponent<ProductSummaryProps> = ({
   return (
     <div
       className="pa3 relative br2 b--black-30 ba mb4-l mb3"
-      data-test-id="product-summary"
+      data-testid="product-summary"
     >
       <AddToListButton product={product} />
       <div className="tc">

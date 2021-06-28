@@ -6,7 +6,7 @@ const SearchBar: React.FunctionComponent = () => {
   return (
     <div
       className="flex pa2 ph3 bg-white items-center br2 mt2"
-      data-test-id="search-bar"
+      data-testid="search-bar"
     >
       <span className="mr3 gray db">
         <FaSearch />
