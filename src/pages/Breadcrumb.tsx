@@ -1,29 +1,51 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
+interface Path {
+  name: string
+  href: string
+}
+
 const Breadcrumb: React.FunctionComponent = () => {
   const location = useLocation()
-  const [paths, setPaths] = useState<string[]>([])
+  const [paths, setPaths] = useState<Path[]>([])
 
   useEffect(() => {
-    const newPaths = location.pathname.split('/').map((path, index) => {
+    const newPaths = location.pathname.split('/').map<Path>((path, index) => {
       if (path === '' && index === 0) {
-        return 'Home'
+        return { name: 'Home', href: '/' }
       }
 
-      return path.replace(/-/g, ' ')
+      return { name: path.replace(/-/g, ' '), href: path }
     })
 
     setPaths(newPaths)
   }, [location])
 
   return (
-    <div className="flex fw5 ttc mb3">
+    <div className="flex ttc mb4 mt2">
       {paths.map((path, index) => {
-        if (index && path) {
-          return <span key={index.toString()}>&nbsp;&gt; {path}</span>
+        if (index && path.href) {
+          return (
+            <a
+              className="black fw6 no-underline"
+              href={path.href}
+              key={index.toString()}
+            >
+              &nbsp;&gt; {path.name}
+            </a>
+          )
         }
-        return <span key={index.toString()}>{path}</span>
+
+        return (
+          <a
+            className="black fw6 no-underline"
+            href={path.href}
+            key={index.toString()}
+          >
+            {path.name}
+          </a>
+        )
       })}
     </div>
   )
