@@ -5,7 +5,7 @@ interface ProductNameProps {
 }
 
 const ProductName: React.FunctionComponent<ProductNameProps> = ({ name }) => {
-  return <h3 className="fw5 tc f5">{name}</h3>
+  return <h3 className="product-name fw5 tc f5">{name}</h3>
 }
 
 export default ProductName
