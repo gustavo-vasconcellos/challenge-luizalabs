@@ -33,3 +33,24 @@ svg {
 .product-image {
   max-width: 300px;
 }
+
+.add-list-button {
+  width: 32px;
+  height: 30px;
+  padding-top: 5px;
+  background: #000;
+  position: relative;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.add-list-button::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 12px solid #000;
+}

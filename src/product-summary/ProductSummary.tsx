@@ -1,5 +1,5 @@
 import * as React from 'react'
-// import AddToListButton from './AddToListButton'
+import AddToListButton from './AddToListButton'
 import ProductImage from './ProductImage'
 import ProductName from './ProductName'
 import ProductPrice from './ProductPrice'
@@ -13,7 +13,9 @@ const ProductSummary: React.FunctionComponent<ProductSummaryProps> = ({
 }) => {
   return (
     <div className="pa3 relative br2 b--black-30 ba mb4-l mb3">
-      <div>{/* <AddToListButton product={product} /> */}</div>
+      <div className="absolute" style={{ top: -3, left: 5 }}>
+        <AddToListButton product={product} />
+      </div>
       <div className="tc">
         <ProductImage src={product.image} alt={product.title} />
       </div>
