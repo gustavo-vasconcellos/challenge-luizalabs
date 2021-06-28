@@ -21,9 +21,9 @@ const Breadcrumb: React.FunctionComponent = () => {
     <div className="flex fw5 ttc mb3">
       {paths.map((path, index) => {
         if (index && path) {
-          return <span>&nbsp;&gt; {path}</span>
+          return <span key={index.toString()}>&nbsp;&gt; {path}</span>
         }
-        return <span>{path}</span>
+        return <span key={index.toString()}>{path}</span>
       })}
     </div>
   )

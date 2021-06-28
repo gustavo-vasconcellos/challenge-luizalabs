@@ -55,7 +55,7 @@ const ListProvider: React.FunctionComponent = ({ children }) => {
   )
 }
 
-export const useList = (sku: number): List => {
+export const useList = (sku?: number): List => {
   const context = useContext(ListContext)
 
   if (!context) {

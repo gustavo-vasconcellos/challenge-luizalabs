@@ -28,7 +28,7 @@ const Gallery: React.FunctionComponent<GalleryProps> = ({
   return (
     <div className="gallery">
       {products.map((product) => (
-        <ProductSummary product={product} />
+        <ProductSummary key={product.sku} product={product} />
       ))}
     </div>
   )

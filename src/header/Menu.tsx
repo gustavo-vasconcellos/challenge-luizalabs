@@ -21,7 +21,7 @@ const Menu: React.FunctionComponent = () => {
         </a>
       </div>
       <div className="f5-l f6 lh-title lh-copy-l">
-        <Link to="/wishlist" className="white no-underline v-mid dib">
+        <Link to="/lista-de-desejos" className="white no-underline v-mid dib">
           <span className="dib v-mid">
             <AiFillHeart />
           </span>

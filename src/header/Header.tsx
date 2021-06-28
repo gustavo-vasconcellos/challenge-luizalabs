@@ -11,9 +11,9 @@ const Header: React.FunctionComponent = () => {
           <Menu />
         </div>
         <div className="flex-l items-start">
-          <div className="mw4-l w-100 tc tl-l">
+          <a href="/" className="white no-underline db mw4-l w-100 tc tl-l">
             <h1 className="fw6 f3-l f2 ma0 lh-copy">MagaNets</h1>
-          </div>
+          </a>
           <div className="flex-grow-1 ">
             <div className="db-l dn">
               <Menu />
