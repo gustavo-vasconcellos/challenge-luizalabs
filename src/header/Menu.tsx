@@ -5,7 +5,7 @@ import Location from './Location'
 
 const Menu: React.FunctionComponent = () => {
   return (
-    <div className="lh-copy flex justify-between">
+    <div className="lh-copy flex justify-between" data-test-id="header-menu">
       <div className="f5-l f6 lh-title lh-copy-l">
         <Location />
       </div>

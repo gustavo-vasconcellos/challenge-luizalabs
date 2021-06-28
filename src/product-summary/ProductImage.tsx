@@ -9,7 +9,14 @@ const ProductImage: React.FunctionComponent<ProductImageProps> = ({
   src,
   alt,
 }) => {
-  return <img src={src} alt={alt} className="product-image w-100 h-100" />
+  return (
+    <img
+      data-test-id="product-image"
+      src={src}
+      alt={alt}
+      className="product-image w-100 h-100"
+    />
+  )
 }
 
 export default ProductImage

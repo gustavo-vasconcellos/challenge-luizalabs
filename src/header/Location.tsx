@@ -2,7 +2,7 @@ import * as React from 'react'
 import { HiLocationMarker } from 'react-icons/hi'
 
 const Location: React.FunctionComponent = () => (
-  <div className="v-mid dib">
+  <div className="v-mid dib" data-test-id="location">
     <span className="dib v-mid">
       <HiLocationMarker />
     </span>

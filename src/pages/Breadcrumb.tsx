@@ -23,7 +23,7 @@ const Breadcrumb: React.FunctionComponent = () => {
   }, [location])
 
   return (
-    <div className="flex ttc mb4 mt2">
+    <div className="flex ttc mb4 mt2" data-test-id="breadcrumb">
       {paths.map((path, index) => {
         if (index && path.href) {
           return (
