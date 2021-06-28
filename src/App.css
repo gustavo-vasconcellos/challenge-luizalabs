@@ -34,16 +34,18 @@ svg {
   max-width: 300px;
 }
 
-.add-list-button {
+.add-to-list-button {
   width: 32px;
   height: 30px;
   padding-top: 5px;
   background: #000;
-  position: relative;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  top: -3px;
+  left: 5px;
 }
-.add-list-button::after {
+
+.add-to-list-button::after {
   content: '';
   position: absolute;
   bottom: -12px;
@@ -53,4 +55,30 @@ svg {
   border-left: 16px solid transparent;
   border-right: 16px solid transparent;
   border-top: 12px solid #000;
+}
+
+.add-to-list-button.remove svg {
+  display: inline;
+}
+.add-to-list-button.remove {
+  top: 5px;
+  left: inherit;
+  right: 5px;
+  background: transparent;
+  color: #000;
+  border-radius: 100%;
+  border: 2px solid #000;
+  font-size: 12px;
+  height: 25px;
+  width: 25px;
+  display: block;
+  text-align: center;
+}
+
+.add-to-list-button.remove:after {
+  display: none;
+}
+
+.product-name {
+  height: 37px;
 }

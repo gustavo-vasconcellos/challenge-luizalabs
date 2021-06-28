@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaHeart } from 'react-icons/fa'
+import { ImCross } from 'react-icons/im'
+import { useLocation } from 'react-router-dom'
 import { useList } from '../wishlist/ListProvider'
 
 interface AddToListButtonProps {
@@ -10,6 +12,8 @@ const AddToListButton: React.FunctionComponent<AddToListButtonProps> = ({
   product,
 }) => {
   const { addOrRemoveItem, isAdded } = useList(product.sku)
+  const location = useLocation()
+  const isWishlistPage = location.pathname.indexOf('lista-de-desejos') !== -1
 
   return (
     <div
@@ -21,11 +25,12 @@ const AddToListButton: React.FunctionComponent<AddToListButtonProps> = ({
       }}
       onClick={() => addOrRemoveItem(product)}
       role="button"
-      className={`${
-        isAdded ? 'red' : 'white'
-      } add-list-button flex items-center justify-center pointer`}
+      className={`${isAdded ? 'red' : 'white'} ${
+        isWishlistPage ? 'remove' : ''
+      } absolute add-to-list-button flex items-center justify-center pointer`}
+      title={isAdded ? 'Remover da lista' : 'Adicionar na lista'}
     >
-      <FaHeart />
+      {isWishlistPage ? <ImCross /> : <FaHeart />}
     </div>
   )
 }
