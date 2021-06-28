@@ -1,8 +1,19 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Location from '../header/Location'
 
-it('<Location />', () => {
-  render(<App />);
-  expect(screen.getByText('Learn React')).toBeInTheDocument();
-});
+describe('Location', () => {
+  it('renders', () => {
+    render(<Location />)
+
+    expect(screen.getByTestId('location')).toBeInTheDocument()
+  })
+
+  it('contains the correct text', () => {
+    render(<Location />)
+
+    expect(screen.getByTestId('location')).toHaveTextContent(
+      'Cidade: São Paulo'
+    )
+  })
+})
