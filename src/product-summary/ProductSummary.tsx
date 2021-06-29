@@ -13,7 +13,7 @@ const ProductSummary: React.FunctionComponent<ProductSummaryProps> = ({
 }) => {
   return (
     <div
-      className="pa3 relative br2 b--black-30 ba mb4-l mb3"
+      className="pa3 relative br2 b--black-30 ba mb4-l mb3 product-summary"
       data-testid="product-summary"
     >
       <AddToListButton product={product} />
