@@ -2,28 +2,8 @@ import { LocalStorageMock } from '@react-mock/localstorage'
 import { screen } from '@testing-library/react'
 import React from 'react'
 import AddToListButton from '../product-summary/AddToListButton'
-import { renderWithRouter } from '../test-utils'
+import { mockProduct, renderWithRouter } from '../test-utils'
 import ListProvider from '../wishlist/ListProvider'
-
-const mockProduct: Product = {
-  id: 0,
-  sku: 8552515751438644,
-  title: 'Camisa Nike Corinthians I',
-  description: '14/15 s/nº',
-  availableSizes: {
-    S: 100,
-    G: 5,
-    GG: 120,
-    GGG: 12,
-  },
-  style: 'Branco com listras pretas',
-  price: 229.9,
-  installments: 9,
-  currencyId: 'BRL',
-  currencyFormat: 'R$',
-  isFreeShipping: true,
-  image: 'https://via.placeholder.com/300x300',
-}
 
 const renderButton = (isAdded?: boolean) =>
   renderWithRouter(
