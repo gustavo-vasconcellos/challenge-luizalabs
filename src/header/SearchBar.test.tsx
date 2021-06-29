@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
-import SearchBar from '../header/SearchBar'
+import SearchBar from './SearchBar'
 
 describe('SearchBar', () => {
   it('renders', () => {

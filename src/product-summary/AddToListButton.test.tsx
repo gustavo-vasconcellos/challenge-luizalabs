@@ -1,7 +1,7 @@
 import { LocalStorageMock } from '@react-mock/localstorage'
 import { fireEvent, screen } from '@testing-library/react'
 import React from 'react'
-import AddToListButton from '../product-summary/AddToListButton'
+import AddToListButton from './AddToListButton'
 import { mockProduct, renderWithRouter } from '../test-utils'
 import ListProvider from '../wishlist/ListProvider'
 

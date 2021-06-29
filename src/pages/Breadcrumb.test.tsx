@@ -1,6 +1,6 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
-import Breadcrumb from '../pages/Breadcrumb'
+import Breadcrumb from './Breadcrumb'
 import { renderWithRouter } from '../test-utils'
 
 describe('Breadcrumb', () => {

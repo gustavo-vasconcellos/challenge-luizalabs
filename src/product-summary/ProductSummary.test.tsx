@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
-import ProductSummary from '../product-summary/ProductSummary'
+import ProductSummary from './ProductSummary'
 import { mockProduct, renderWithRouter } from '../test-utils'
 
 describe('ProductSummary', () => {

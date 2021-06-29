@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Location from '../header/Location'
+import Location from './Location'
 
 describe('Location', () => {
   it('renders', () => {

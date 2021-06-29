@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
-import Gallery from '../search-result/Gallery'
+import Gallery from './Gallery'
 import { mockProducts, renderWithRouter } from '../test-utils'
 
 describe('Gallery', () => {
