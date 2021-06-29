@@ -13,6 +13,7 @@ const SearchBar: React.FunctionComponent = () => {
       </span>
       <input
         type="text"
+        data-testid="search-bar-input"
         value={text}
         onChange={(event) => setText(event.target.value)}
         className="bn outline-0 w-100 db black lh-copy"
