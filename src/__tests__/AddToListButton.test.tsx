@@ -1,5 +1,5 @@
 import { LocalStorageMock } from '@react-mock/localstorage'
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import React from 'react'
 import AddToListButton from '../product-summary/AddToListButton'
 import { mockProduct, renderWithRouter } from '../test-utils'
@@ -39,5 +39,30 @@ describe('AddToListButton', () => {
       'title',
       'Adicionar na lista'
     )
+  })
+
+  it('flows correctly to add and remove product from list', () => {
+    renderButton()
+
+    const button = screen.getByTestId('add-to-list-button')
+    const clickOnButton = () =>
+      fireEvent(
+        button,
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        })
+      )
+
+    expect(button).toBeInTheDocument()
+    // Deve adicionar o produto no clique
+    expect(button).toHaveProperty('title', 'Adicionar na lista')
+    clickOnButton()
+
+    // Deve remover o produto no clique e voltar ao estado inicial
+    expect(button).toHaveProperty('title', 'Remover da lista')
+    clickOnButton()
+
+    expect(button).toHaveProperty('title', 'Adicionar na lista')
   })
 })
